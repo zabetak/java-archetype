@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.zabetak</groupId>
+    <artifactId>java-archetype</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>maven-archetype</packaging>
+
+    <description>A maven archetype project with basic style checks and possibility to publish to central.</description>
+    <url>https://github.com/zabetak/java-archetype</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Stamatis Zampetakis</name>
+            <email>zabetak@gmail.com</email>
+            <organizationUrl>https://zabetak.github.io/</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/zabetak/java-archetype.git</connection>
+        <developerConnection>scm:git:ssh://github.com:zabetakjava-archetype.git</developerConnection>
+        <url>http://github.com/zabetak/java-archetype/tree/main</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>3.1.1</version>
+            </extension>
+        </extensions>
+    </build>
+</project>
